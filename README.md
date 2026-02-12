@@ -35,29 +35,29 @@ The AI follows a strict state machine to ensure a consistent and compliant inter
 
 ```mermaid
 graph TD
-    A[Start Application] --> B[Introduction Phase]
-    B --> C{Got Name & Email?}
+    A["Start Application"] --> B["Introduction Phase"]
+    B --> C{"Got Name & Email?"}
     C -- No --> B
-    C -- Yes --> D[Mandatory Screening]
+    C -- Yes --> D["Mandatory Screening"]
     
-    D --> E{Ask Next Requirement}
-    E --> F[Analyze Response]
+    D --> E{"Ask Next Requirement"}
+    E --> F["Analyze Response"]
     
-    F -- Requirement Failed --> G[Disqualification Flow]
-    G --> H[End Interview (Status: Disqualified)]
+    F -- Requirement Failed --> G["Disqualification Flow"]
+    G --> H["End Interview (Status: Disqualified)"]
     
-    F -- Requirement Met --> I{All Mandatory Met?}
+    F -- Requirement Met --> I{"All Mandatory Met?"}
     I -- No --> E
-    I -- Yes --> J[Preferred Scoring Phase]
+    I -- Yes --> J["Preferred Scoring Phase"]
     
-    J --> K{Ask Soft Skill Qs}
-    K --> L[Score Response (0-20 pts)]
-    L --> M{All Scored?}
+    J --> K{"Ask Soft Skill Qs"}
+    K --> L["Score Response (0-20 pts)"]
+    L --> M{"All Scored?"}
     M -- No --> K
-    M -- Yes --> N[Wrap-Up Phase]
+    M -- Yes --> N["Wrap-Up Phase"]
     
-    N --> O[Calculate Final Score]
-    O --> P[End Interview (Status: Qualified)]
+    N --> O["Calculate Final Score"]
+    O --> P["End Interview (Status: Qualified)"]
 ```
 
 ---
