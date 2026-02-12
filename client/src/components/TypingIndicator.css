@@ -1,0 +1,45 @@
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    align-self: flex-start;
+}
+
+.typing-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.typing-dots {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    border-top-left-radius: var(--space-xs);
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-secondary);
+    animation: typing-dot 1.4s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}

@@ -1,0 +1,5 @@
+FALLBACK ERROR: All Gemini models failed. Last error: [GoogleGenerativeAI Error]: First content should be with role 'user', got model. Chain: gemini-3-pro-preview → gemini-2.5-flash → gemini-2.0-flash
+STACK: Error: All Gemini models failed. Last error: [GoogleGenerativeAI Error]: First content should be with role 'user', got model. Chain: gemini-3-pro-preview → gemini-2.5-flash → gemini-2.0-flash
+    at ModelFallbackService.generateResponse (D:\AI ChatBot\server\services\gemini\model-fallback.service.js:107:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async test ([eval]:1:901)
